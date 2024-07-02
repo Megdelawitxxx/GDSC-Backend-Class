@@ -1,42 +1,42 @@
 function Calculator() {
-    console.log('Hello! This is a calculator application. What would you like to do?');
-    console.log('1. Perform arithmetic calculation');
-    console.log('2. Calculate compound interest');
-    const command = prompt('Enter number here > ');
+    console.log(`Hello! This is a calculator application. What would you like to do?`);
+    console.log(`1. Perform arithmetic calculation`);
+    console.log(`2. Calculate compound interest`);
+    const command = prompt(`Enter number here > `);
 
-    if (command === '1') {
-        console.log('You have chosen to perform a calculation. Enter 2 numbers and the operation you would like to perform (+, -, *, /)');
+    if (command === `1`) {
+        console.log(`You have chosen to perform a calculation. Enter 2 numbers and the operation you would like to perform (+, -, *, /)`);
         
-        const number1 = parseInt(prompt('First number: '));
-        const operation = prompt('Operation: ');
-        const number2 = parseInt(prompt('Second number: '));
+        const number1 = parseInt(prompt(`First number: `));
+        const operation = prompt(`Operation: `);
+        const number2 = parseInt(prompt(`Second number: `));
 
         switch (operation) {
-            case '+':
-                console.log('${number1} + ${number2} =', number1 + number2);
+            case `+`:
+                console.log(`${number1} + ${number2} =`, number1 + number2);
                 break;
-            case '-':
-                console.log('${number1} - ${number2} =', number1 - number2);
+            case `-`:
+                console.log(`${number1} - ${number2} =`, number1 - number2);
                 break;
-            case '*':
-                console.log('${number1} * ${number2} =', number1 * number2);
+            case `*`:
+                console.log(`${number1} * ${number2} =`, number1 * number2);
                 break;
-            case '/':
-                console.log('${number1} / ${number2} =', number1 / number2);
+            case `/`:
+                console.log(`${number1} / ${number2} =`, number1 / number2);
                 break;
             default:
-                console.log('Invalid operation');
+                console.log(`Invalid operation`);
         }
-    } else if (command === '2') {
-        console.log('You have chosen to calculate compound interest. Enter the following information:');
+    } else if (command === `2`) {
+        console.log(`You have chosen to calculate compound interest. Enter the following information:`);
 
-        const P = parseFloat(prompt('Your initial amount of money (in Birr): '));
-        const r = parseFloat(prompt('The annual interest rate (in decimals): '));
-        const n = parseInt(prompt('The number of times interest is compounded per year: '));
-        const t = parseInt(prompt('The number of years: '));
+        const P = parseFloat(prompt(`Your initial amount of money (in Birr): `));
+        const r = parseFloat(prompt(`The annual interest rate (in decimals): `));
+        const n = parseInt(prompt(`The number of times interest is compounded per year: `));
+        const t = parseInt(prompt(`The number of years: `));
 
         const A = P * Math.pow((1 + r / n), (n * t));
-        console.log('The total amount after ${t} years is: Birr ${A}');
+        console.log(`The total amount after ${t} years is: Birr ${A}`);
     }
 }
 
